@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @media (max-width: 767.98px) {
+    :root {
+      --m: clamp(0.82px, calc(100vw / 390), 1.25px);
+    }
+  }
+
+  :root {
+    --s: clamp(0.78px, calc(100vw / 1672), 1.35px);
+    --brand-navy: #14285A;
+    --brand-deep-navy: #0B2A63;
+    --brand-hero-bottom: #08204F;
+    --brand-amber: #F5A800;
+    --brand-ink: #14285A;
+    --brand-offwhite: #F6F8FB;
+    --brand-whatsapp: #16A34A;
+    --brand-whatsapp-dark: #15803D;
+    --brand-nav-pill: #E8EDF7;
+    --blue-bright: #1E5BE0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #14285A;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  /* Mega Menu Keyframes and Animation */
+  @keyframes megaMenuIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-mega-menu {
+    animation: megaMenuIn 160ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-mega-menu {
+      animation: none !important;
+    }
+  }
+
+  /* Default Typography Scales (Barlow Condensed for Headings, UPPERCASE) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-barlow-condensed), -apple-system, sans-serif;
+    text-transform: uppercase;
+    color: #14285A;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 60px;
+      line-height: 1.0;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 42px;
+      line-height: 1.1;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  p {
+    color: #475569; /* slate-600 */
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #16388F;
+    outline-offset: 2px;
+  }
+
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Slanted amber bar accent */
+  .slash-accent {
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    background-color: #F5A800;
+    transform: skewX(-20deg);
+    border-radius: 1px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  /* Eyebrow Label (12px, uppercase, 0.12em spacing) */
+  .eyebrow-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #16388F;
+  }
+  .eyebrow-label-dark {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #F5A800;
+  }
+
+  /* Card base style: 16px radius, 1px border, soft shadow, 4px hover lift */
+  .card-premium {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0; /* slate-200 */
+    box-shadow: 0 8px 30px rgba(11, 27, 58, 0.08);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  }
+  .card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(11, 27, 58, 0.14);
+  }
+
+  /* Standard Pill Buttons: 9999px radius, 48px min-height, 16px, 600 weight */
+  .btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-pill-amber {
+    background-color: #F5A800;
+    color: #0B1B3A; /* navy text on amber */
+    border: 1px solid #F5A800;
+  }
+  .btn-pill-amber:hover {
+    background-color: #df9800;
+    border-color: #df9800;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(245, 168, 0, 0.35);
+  }
+
+  .btn-pill-whatsapp {
+    background-color: #15803D;
+    color: #FFFFFF;
+    border: 1px solid #15803D;
+  }
+  .btn-pill-whatsapp:hover {
+    background-color: #166534;
+    border-color: #166534;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(22, 101, 52, 0.35);
+  }
+
+  .btn-pill-outline-white {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+  }
+  .btn-pill-outline-white:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+  }
+
+  .btn-pill-navy {
+    background-color: #16388F;
+    color: #FFFFFF;
+    border: 1px solid #16388F;
+  }
+  .btn-pill-navy:hover {
+    background-color: #0e245c;
+    border-color: #0e245c;
+    transform: translateY(-1px);
+  }
+}
+
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F8FB;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
