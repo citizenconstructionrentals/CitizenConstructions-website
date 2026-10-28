@@ -6,6 +6,9 @@ import { siteConfig } from "@/config/site";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { ArrowRight, Calculator, CheckCircle2, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { FaqSection } from "@/components/home/FaqSection";
+import { FaqJsonLd } from "@/components/shared/JsonLd";
+import { RENTAL_RATES_FAQS } from "@/data/faq";
 
 export const metadata: Metadata = {
   title: "Rental Rates & Charges | Citizen Construction Rentals",
@@ -33,6 +36,7 @@ export const metadata: Metadata = {
 export default function RentalRatesPage() {
   return (
     <>
+      <FaqJsonLd items={RENTAL_RATES_FAQS} />
       {/* Hero Header */}
       <section className="bg-brand-navy text-white py-14 sm:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-amber/10 -skew-x-12 translate-x-16 pointer-events-none" />
@@ -145,42 +149,12 @@ export default function RentalRatesPage() {
       </section>
 
       {/* FAQs on Rental Rates */}
-      <section className="py-16 sm:py-20 bg-brand-offwhite border-t border-slate-200/80">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold uppercase text-slate-900 font-heading text-center mb-8">
-            Frequently Asked Questions on Rental Charges
-          </h2>
-
-          <div className="space-y-4">
-            <div className="p-6 rounded-2xl border border-slate-200 bg-white">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                What is the rent of a scissor lift per day in India?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Daily scissor lift rental rates depend upon the working height of the lift, whether you rent brand new Straightline or used JLG/Genie models, total days required, site location, and equipment transport mobilization. Share these details on WhatsApp for an accurate quote tailored to your exact site requirements.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl border border-slate-200 bg-white">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                How much does it cost to rent a scissor lift for a month?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Monthly rentals represent the most cost-effective tier for continuous construction and warehouse fit-out contracts. Contact our rental desk with your project duration for competitive monthly pricing.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl border border-slate-200 bg-white">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                How is boom lift rental cost calculated?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Boom lift rental charges are evaluated based on vertical reach height (such as 16m articulating or 28m telescopic reach), terrain capability, deployment timeframe, and transport freight to your destination.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        items={RENTAL_RATES_FAQS}
+        layout="centered"
+        bg="bg-brand-offwhite border-t border-slate-200/80"
+        title="Frequently Asked Questions on Rental Charges"
+      />
 
       {/* Final Call to Action */}
       <CtaBand />

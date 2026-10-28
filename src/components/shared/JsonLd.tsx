@@ -1,6 +1,6 @@
 import React from "react";
 import { siteConfig } from "@/config/site";
-import { FAQ_ITEMS } from "@/data/faq";
+import { FAQ_ITEMS, type FaqItem } from "@/data/faq";
 import { ScissorLiftModel } from "@/data/scissor-lifts";
 
 export function OrganizationJsonLd() {
@@ -39,11 +39,11 @@ export function OrganizationJsonLd() {
   );
 }
 
-export function FaqJsonLd() {
+export function FaqJsonLd({ items = FAQ_ITEMS }: { items?: FaqItem[] } = {}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ_ITEMS.map((item) => ({
+    mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

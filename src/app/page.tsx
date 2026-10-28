@@ -14,10 +14,12 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { FaqJsonLd } from "@/components/shared/JsonLd";
 
+import { HOME_FAQS } from "@/data/faq";
+
 export const metadata: Metadata = {
   title: "Scissor Lift on Rent | Citizen Construction Rentals India",
   description:
-    "Citizen Construction Rentals offers scissor lift on rent and boom lift on rent across India. Reliable scissor lift rental India, boom lift rental India, aerial work platform rental, man lift on rent, and aerial lift on hire with fast site mobilization.",
+    "Citizen Construction Rentals provides brand new Straightline electric scissor lifts and boom lifts on rent across India with dependable site delivery.",
   alternates: {
     canonical: siteConfig.url,
   },
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <FaqJsonLd />
+      <FaqJsonLd items={HOME_FAQS} />
 
       {/* 1. Hero with Photo, Ken-Burns & Overlapping Trust Bar */}
       <Hero />

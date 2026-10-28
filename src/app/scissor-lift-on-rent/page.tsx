@@ -7,6 +7,9 @@ import { scissorLiftsData } from "@/data/scissor-lifts";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { Check, ArrowRight, ShieldCheck, Zap, Building2, HelpCircle } from "lucide-react";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { FaqSection } from "@/components/home/FaqSection";
+import { FaqJsonLd } from "@/components/shared/JsonLd";
+import { SCISSOR_FAQS } from "@/data/faq";
 
 export const metadata: Metadata = {
   title: "Scissor Lift on Rent in India | Citizen Construction Rentals",
@@ -34,6 +37,7 @@ export const metadata: Metadata = {
 export default function ScissorLiftOnRentPage() {
   return (
     <>
+      <FaqJsonLd items={SCISSOR_FAQS} />
       {/* Hero Header */}
       <section className="bg-brand-navy text-white py-14 sm:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-amber/10 -skew-x-12 translate-x-16 pointer-events-none" />
@@ -228,42 +232,11 @@ export default function ScissorLiftOnRentPage() {
       </section>
 
       {/* FAQs on Scissor Lifts */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold uppercase text-slate-900 font-heading text-center mb-8">
-            Frequently Asked Questions: Scissor Lift on Hire
-          </h2>
-
-          <div className="space-y-4">
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                Can scissor lifts be used indoors?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Yes. Our brand new Straightline electric scissor lifts are specifically engineered with non-marking solid tyres and battery-powered electric drivetrains that produce zero exhaust emissions, making them fully compliant for indoor warehouse and commercial showroom operations.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                What is the difference between a scissor lift and a boom lift?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Scissor lifts elevate vertically directly upward with a large deck and high payload capacity, ideal for tasks along flat ceilings and straight walls. Boom lifts (or cherry pickers) feature an arm that extends up and out over obstacles for high-reach outdoor and structural work.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50" lang="hi">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                क्या आप भारत भर में सिज़र लिफ्ट किराये पर देते हैं?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                हाँ, Citizen Construction Rentals पूरे भारत में सिज़र लिफ्ट किराये पर (scissor lift kiraye par) उपलब्ध कराता है। हमारी सेवा में नई स्ट्रैटलाइन और प्रमाणित यूज़्ड मशीनें त्वरित डिलीवरी के साथ शामिल हैं।
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        items={SCISSOR_FAQS}
+        layout="centered"
+        title="Frequently Asked Questions: Scissor Lift on Hire"
+      />
 
       {/* Final Call to Action */}
       <CtaBand />

@@ -7,6 +7,9 @@ import { boomLiftsData } from "@/data/boom-lifts";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { ArrowRight, ShieldCheck, HelpCircle } from "lucide-react";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { FaqSection } from "@/components/home/FaqSection";
+import { FaqJsonLd } from "@/components/shared/JsonLd";
+import { BOOM_FAQS } from "@/data/faq";
 
 export const metadata: Metadata = {
   title: "Boom Lift on Rent in India | High Reach Aerial Work Platforms",
@@ -34,6 +37,7 @@ export const metadata: Metadata = {
 export default function BoomLiftOnRentPage() {
   return (
     <>
+      <FaqJsonLd items={BOOM_FAQS} />
       {/* Hero Header */}
       <section className="bg-brand-navy text-white py-14 sm:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-amber/10 -skew-x-12 translate-x-16 pointer-events-none" />
@@ -102,7 +106,7 @@ export default function BoomLiftOnRentPage() {
                   <div className="relative h-64 w-full bg-slate-50 border-b border-slate-100">
                     <Image
                       src={model.images[0]}
-                      alt={`${model.name} ${model.type === "telescopic" ? "telescopic" : "articulating"} boom lift, ${model.workingHeight} working height`}
+                      alt={`${model.name} ${model.type.toLowerCase()}, ${model.workingHeight} working height`}
                       fill
                       className="object-contain p-4"
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -195,33 +199,11 @@ export default function BoomLiftOnRentPage() {
       </section>
 
       {/* FAQs on Boom Lifts */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold uppercase text-slate-900 font-heading text-center mb-8">
-            Frequently Asked Questions: Boom Lift Rental
-          </h2>
-
-          <div className="space-y-4">
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                What is the difference between a scissor lift and a boom lift?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Scissor lifts elevate vertically straight up with a large deck and high payload capacity, ideal for flat indoor ceilings. Boom lifts reach both vertically and horizontally up and over obstacles for high-reach outdoor and structural tasks.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl border border-slate-200 bg-slate-50" lang="hi">
-              <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                क्या आप भारत में बूम लिफ्ट किराये पर देते हैं?
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                हाँ, Citizen Construction Rentals भारत भर में बूम लिफ्ट किराये पर (boom lift kiraye par) और चेरी पिकर उपलब्ध कराता है। हमारी नई और यूज़्ड दोनों मशीनें उच्च-पहुंच वाले औद्योगिक प्रोजेक्ट्स के लिए तुरंत उपलब्ध हैं।
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        items={BOOM_FAQS}
+        layout="centered"
+        title="Frequently Asked Questions: Boom Lift Rental"
+      />
 
       {/* Final Call to Action */}
       <CtaBand />

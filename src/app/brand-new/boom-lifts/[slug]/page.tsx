@@ -34,6 +34,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const model = boomLiftsData.find((m) => m.slug === slug);
   if (!model) return {};
 
+  const isSl28t = slug.includes("sl28t");
+
   const title = isSl28t
     ? "Straightline SL28T Telescopic Boom Lift on Rent | Citizen Construction Rentals"
     : "Straightline Articulating Boom Lift on Rent | Citizen Construction Rentals";
