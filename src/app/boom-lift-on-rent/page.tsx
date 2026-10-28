@@ -4,8 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { boomLiftsData } from "@/data/boom-lifts";
+import { CITIES } from "@/data/cities";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
-import { ArrowRight, ShieldCheck, HelpCircle } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Building2,
+  Factory,
+  Truck,
+  MapPin,
+  CheckCircle2,
+  Compass,
+  Zap,
+} from "lucide-react";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FaqJsonLd } from "@/components/shared/JsonLd";
@@ -38,6 +49,7 @@ export default function BoomLiftOnRentPage() {
   return (
     <>
       <FaqJsonLd items={BOOM_FAQS} />
+
       {/* Hero Header */}
       <section className="bg-brand-navy text-white py-14 sm:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-amber/10 -skew-x-12 translate-x-16 pointer-events-none" />
@@ -55,7 +67,7 @@ export default function BoomLiftOnRentPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-3xl leading-relaxed font-sans">
-            Citizen Construction Rentals provides heavy-duty boom lift on rent in India for industrial plants, infrastructure development, petrochemical facilities, and architectural facade work.
+            Citizen Construction Rentals provides heavy-duty boom lift on rent in India for industrial plants, infrastructure development, petrochemical facilities, and architectural facade work. Rent brand new Straightline telescopic and articulating booms or certified used Genie and JLG aerial platforms, dispatched directly from our New Delhi base to your project site.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4 pt-2">
@@ -88,7 +100,7 @@ export default function BoomLiftOnRentPage() {
               High Reach Telescopic &amp; Articulating Fleet
             </h2>
             <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
-              When working at elevated heights or over ground obstacles, boom lifts provide the outreach and stability needed for demanding industrial tasks. Telescopic models deliver direct straight outreach for maximum vertical extension, while articulating models feature hinged boom sections to maneuver up, over, and around structural steel, piping, and machinery.
+              When working at elevated heights or over ground obstacles, boom lifts provide the horizontal outreach and stability needed for demanding industrial tasks. Telescopic models deliver direct straight outreach for maximum vertical extension, while articulating models feature hinged boom sections to maneuver up, over, and around structural steel, piping, and machinery.
             </p>
             <p className="mt-3 text-base text-slate-600 leading-relaxed">
               Our inventory includes brand new Straightline lifts as well as trusted used JLG and Genie machines. Each unit is delivered directly from our Delhi base to your site following thorough pre-dispatch inspection.
@@ -160,40 +172,170 @@ export default function BoomLiftOnRentPage() {
       {/* Industrial Applications for Boom Lifts */}
       <section className="py-16 sm:py-20 bg-brand-offwhite border-t border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold uppercase text-slate-900 font-heading">
-              Boom Lift for High Reach Work Applications
+              Boom Lift High Reach Applications
             </h2>
             <p className="mt-3 text-base text-slate-600">
-              Our boom lifts on hire are engineered to tackle demanding construction and facility requirements:
+              Our boom lifts on hire are engineered to tackle demanding construction, industrial, and infrastructure requirements across India:
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-              <h3 className="font-bold text-brand-navy font-heading text-lg uppercase">Heavy Industrial Plants</h3>
-              <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                Refinery pipe racking, power station retrofits, overhead crane servicing, and structural beam maintenance.
-              </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="card-premium p-6 bg-white border border-slate-200/90 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-blue-50 text-brand-navy flex items-center justify-center mb-4">
+                  <Factory className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-brand-navy font-heading text-lg uppercase mb-2">Heavy Industrial Plants</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Refinery pipe racking, power station retrofits, overhead crane servicing, and structural steel beam maintenance over heavy machinery.
+                </p>
+              </div>
             </div>
-            <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-              <h3 className="font-bold text-brand-navy font-heading text-lg uppercase">Commercial Facades</h3>
-              <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                High-rise glass installation, exterior pressure washing, sealant application, and architectural finishing.
-              </p>
+
+            <div className="card-premium p-6 bg-white border border-slate-200/90 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-amber-50 text-brand-navy flex items-center justify-center mb-4">
+                  <Building2 className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-brand-navy font-heading text-lg uppercase mb-2">Commercial Facades</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  High-rise curtain wall glazing, structural cladding, exterior pressure washing, sealant inspection, and architectural envelope finishing.
+                </p>
+              </div>
             </div>
-            <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-              <h3 className="font-bold text-brand-navy font-heading text-lg uppercase">Infrastructure Projects</h3>
-              <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                Metro viaduct inspections, airport terminal construction, stadium lighting, and bridge retrofitting.
-              </p>
+
+            <div className="card-premium p-6 bg-white border border-slate-200/90 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-brand-navy flex items-center justify-center mb-4">
+                  <Compass className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-brand-navy font-heading text-lg uppercase mb-2">Infrastructure Projects</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Metro rail viaduct inspections, airport terminal canopy construction, elevated highway piers, and bridge retrofitting.
+                </p>
+              </div>
             </div>
-            <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-              <h3 className="font-bold text-brand-navy font-heading text-lg uppercase">High Altitude Signage</h3>
-              <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                Large billboard mounting, high-mast electrical cabling, highway hoardings, and LED display installation.
-              </p>
+
+            <div className="card-premium p-6 bg-white border border-slate-200/90 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-purple-50 text-brand-navy flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-brand-navy font-heading text-lg uppercase mb-2">High Altitude Utilities</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  High-mast floodlight replacement, highway overhead signage, outdoor transmission towers, and stadium lighting maintenance.
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Articulating vs Telescopic Selection Guide */}
+      <section className="py-16 sm:py-20 bg-white border-t border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-4">
+              <div className="eyebrow-label">
+                <span className="slash-accent" />
+                <span>Boom Lift Geometry Guide</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold uppercase text-slate-900 font-heading">
+                Articulating Booms vs. Telescopic Booms
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                Choosing between an articulating (knuckle) boom and a telescopic (stick) boom depends directly on your site geography, horizontal reach requirements, and ground obstacles:
+              </p>
+              <div className="space-y-3 text-sm text-slate-700">
+                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                  <strong className="block text-slate-900 font-bold mb-1">
+                    Articulating Boom Lifts (Up-and-Over Reach):
+                  </strong>
+                  Features multiple hinged arm joints with a rotating jib. Best suited for congested industrial plant floors where the machine base sits outside an obstacle (such as pipe racks or factory machinery) and the basket maneuvers over and into the work area.
+                </div>
+                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                  <strong className="block text-slate-900 font-bold mb-1">
+                    Telescopic Boom Lifts (Maximum Straight Outreach):
+                  </strong>
+                  Extends in a straight line from the turntable. Our Straightline SL28T provides up to 28 m working height and 21.8 m horizontal outreach. Ideal for large open job sites, bridge construction, shipyard work, and exterior facade installation where maximum horizontal distance is vital.
+                </div>
+              </div>
+            </div>
+
+            <div className="card-premium p-8 bg-brand-offwhite border border-slate-200/90 shadow-sm space-y-5">
+              <h3 className="text-lg font-bold text-slate-900 uppercase font-heading">
+                Safety &amp; Operational Standards
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Every boom lift on hire from Citizen Construction Rentals adheres to rigorous safety standards:
+              </p>
+              <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Full 4WD Rough-Terrain Capability:</strong> Oscillating axles, foam-filled heavy lug tyres, and gradeability up to 45% for rugged construction yards.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Advanced Load-Sensing Systems:</strong> Platform load sensors prevent operation beyond rated basket capacity (230 kg to 250 kg).</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Dual-Control Emergency Lowering:</strong> Ground and platform control consoles equipped with secondary auxiliary power units for emergency descent.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Pre-Dispatch Load Testing:</strong> Every machine is calibrated and certified before leaving our Delhi maintenance hub.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Grid Linking to City Landing Pages */}
+      <section className="py-16 sm:py-20 bg-brand-offwhite border-t border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-10">
+            <div className="eyebrow-label mb-2">
+              <span className="slash-accent" />
+              <span>Pan-India Coverage</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 uppercase font-heading">
+              Service Areas for Boom Lift Rental Across India
+            </h2>
+            <p className="mt-3 text-base text-slate-600 leading-relaxed">
+              We mobilize heavy Straightline telescopic and articulating boom lifts and tested used Genie and JLG machines to project sites in key industrial hubs:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {CITIES.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/boom-lift-on-rent-in-${c.slug}`}
+                className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-brand-navy hover:shadow-md transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-slate-900 group-hover:text-brand-navy text-base">
+                      {c.name}
+                    </span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-semibold">
+                      {c.tier === 1 ? "NCR" : "Pan-India"}
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 line-clamp-2">
+                    {c.industrialHubs.slice(0, 3).join(", ")} &amp; more.
+                  </p>
+                </div>
+                <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-brand-navy group-hover:text-brand-amber transition-colors">
+                  <span>View {c.name} Rental</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

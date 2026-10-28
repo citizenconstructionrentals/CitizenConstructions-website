@@ -22,8 +22,8 @@ export function Footer() {
   return (
     <footer className="bg-brand-ink text-white/80 pt-16 pb-[max(6.5rem,calc(env(safe-area-inset-bottom)+5.5rem))] md:pb-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 4-Column Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-white/10">
+        {/* 5-Column Top Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Col 1: Brand & Story */}
           <div className="space-y-4">
             {/* Logo in white rounded pill */}
@@ -172,7 +172,85 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 4: Contact Details */}
+          {/* Col 4: Service Areas */}
+          <div>
+            <p className="font-bold text-white text-[16px] tracking-tight mb-4">
+              Service Areas
+            </p>
+            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[13px]">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-amber mb-1.5">
+                  Delhi NCR
+                </p>
+                <ul className="space-y-1.5 text-white/80">
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-delhi" className="hover:text-brand-amber transition-colors">
+                      Delhi
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-gurgaon" className="hover:text-brand-amber transition-colors">
+                      Gurgaon
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-noida" className="hover:text-brand-amber transition-colors">
+                      Noida
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-ghaziabad" className="hover:text-brand-amber transition-colors">
+                      Ghaziabad
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-faridabad" className="hover:text-brand-amber transition-colors">
+                      Faridabad
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-amber mb-1.5">
+                  Pan-India
+                </p>
+                <ul className="space-y-1.5 text-white/80">
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-mumbai" className="hover:text-brand-amber transition-colors">
+                      Mumbai
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-pune" className="hover:text-brand-amber transition-colors">
+                      Pune
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-bengaluru" className="hover:text-brand-amber transition-colors">
+                      Bengaluru
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-hyderabad" className="hover:text-brand-amber transition-colors">
+                      Hyderabad
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-chennai" className="hover:text-brand-amber transition-colors">
+                      Chennai
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/scissor-lift-on-rent-in-ahmedabad" className="hover:text-brand-amber transition-colors">
+                      Ahmedabad
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Col 5: Contact Details */}
           <div>
             <p className="font-bold text-white text-[16px] tracking-tight mb-4">
               Rental Desk
