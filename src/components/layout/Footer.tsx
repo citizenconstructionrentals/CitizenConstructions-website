@@ -314,6 +314,12 @@ export function Footer() {
             {USED_TRADEMARK_DISCLAIMER}
           </p>
         </div>
+
+        <div className="mt-6 pt-4 border-t border-white/5 text-center">
+          <p className="text-[11px] text-white/50 tracking-wide">
+            Made by Ekam Singh
+          </p>
+        </div>
       </div>
     </footer>
   );
