@@ -13,19 +13,26 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "JLG Scissor Lift on Rent & Genie Fleet | Citizen Construction Rentals",
+  title: "JLG & Genie Scissor Lifts on Rent | Citizen Construction Rentals",
   description:
-    "Get JLG scissor lift on rent and Genie scissor lift on rent from Citizen Construction Rentals. Tested used scissor lift on rent, Genie scissor lift rental India, and JLG electric scissor rental options delivered across India.",
+    "Rent inspected used JLG and Genie electric scissor lifts from Citizen Construction Rentals. Dependable machines delivered directly to your project site across India.",
   alternates: {
     canonical: `${siteConfig.url}/used/scissor-lifts`,
   },
-  keywords: [
-    "JLG scissor lift on rent",
-    "Genie scissor lift on rent",
-    "used scissor lift on rent",
-    "Genie scissor lift rental India",
-    "JLG electric scissor rental",
-  ],
+  openGraph: {
+    title: "JLG & Genie Scissor Lifts on Rent | Citizen Construction Rentals",
+    description:
+      "Rent inspected used JLG and Genie electric scissor lifts from Citizen Construction Rentals. Dependable machines delivered directly to your project site across India.",
+    url: `${siteConfig.url}/used/scissor-lifts`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JLG & Genie Scissor Lifts on Rent | Citizen Construction Rentals",
+    description:
+      "Rent inspected used JLG and Genie electric scissor lifts from Citizen Construction Rentals. Dependable machines delivered directly to your project site across India.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function UsedScissorLiftsPage() {
@@ -78,7 +85,7 @@ export default function UsedScissorLiftsPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Citizen Construction Rentals provides dependable JLG scissor lift on rent and Genie scissor lift on rent solutions. Select from our used scissor lift on rent options with specialized Genie scissor lift rental India and JLG electric scissor rental fleets delivered directly to your project site.
+            Citizen Construction Rentals provides dependable JLG and Genie electric scissor lifts on rent across India. Fully tested, job-ready machines delivered directly to your project site.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -106,7 +113,7 @@ export default function UsedScissorLiftsPage() {
                   <div className="relative h-64 w-full mb-6 rounded-2xl overflow-hidden bg-brand-offwhite p-4">
                     <Image
                       src={item.image}
-                      alt={item.brand === "JLG" ? "JLG scissor lift on rent - electric slab access" : "Genie scissor lift on rent - compact indoor aerial platform"}
+                      alt={item.brand === "JLG" ? "Used JLG electric scissor lift" : "Used Genie electric scissor lift"}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain group-hover:scale-105 transition-transform duration-300"

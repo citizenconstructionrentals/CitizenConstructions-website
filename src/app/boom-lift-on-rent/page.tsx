@@ -11,16 +11,23 @@ import { CtaBand } from "@/components/shared/CtaBand";
 export const metadata: Metadata = {
   title: "Boom Lift on Rent in India | High Reach Aerial Work Platforms",
   description:
-    "Boom lift on rent in India from Citizen Construction Rentals. Brand new Straightline boom lifts & trusted used JLG & Genie cherry pickers on hire pan-India.",
+    "Rent Straightline telescopic and articulating boom lifts and used JLG and Genie machines across India. High-reach access for industrial and infrastructure sites.",
   alternates: {
     canonical: `${siteConfig.url}/boom-lift-on-rent`,
   },
   openGraph: {
-    title: "Boom Lift on Rent in India | Citizen Construction Rentals",
+    title: "Boom Lift on Rent in India | High Reach Aerial Work Platforms",
     description:
-      "High reach aerial work platform rental across India. Straightline, JLG, and Genie boom lifts on hire for industrial plants and infrastructure.",
+      "Rent Straightline telescopic and articulating boom lifts and used JLG and Genie machines across India. High-reach access for industrial and infrastructure sites.",
     url: `${siteConfig.url}/boom-lift-on-rent`,
     images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Boom Lift on Rent in India | High Reach Aerial Work Platforms",
+    description:
+      "Rent Straightline telescopic and articulating boom lifts and used JLG and Genie machines across India. High-reach access for industrial and infrastructure sites.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
   },
 };
 
@@ -74,13 +81,13 @@ export default function BoomLiftOnRentPage() {
               <span>High-Altitude Access</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 uppercase">
-              Boom Lift on Rent in India — High Reach &amp; Articulating Fleet
+              High Reach Telescopic &amp; Articulating Fleet
             </h2>
             <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
-              When working at extreme heights or over complicated ground obstacles, our boom lift rental service (including cherry picker on rent options and boom lift on hire models) is the industry standard choice. In the aerial lift industry, boom lifts are generally categorized into telescopic models (which provide long straight outreach) and articulating models (which offer multiple hinged joints to reach up, over, and around structural obstructions).
+              When working at elevated heights or over ground obstacles, boom lifts provide the outreach and stability needed for demanding industrial tasks. Telescopic models deliver direct straight outreach for maximum vertical extension, while articulating models feature hinged boom sections to maneuver up, over, and around structural steel, piping, and machinery.
             </p>
             <p className="mt-3 text-base text-slate-600 leading-relaxed">
-              Our comprehensive aerial work platform on rent inventory includes brand new Straightline lifts as well as trusted used JLG and Genie machines. Each unit is delivered to your site with pre-dispatch maintenance inspection.
+              Our inventory includes brand new Straightline lifts as well as trusted used JLG and Genie machines. Each unit is delivered directly from our Delhi base to your site following thorough pre-dispatch inspection.
             </p>
           </div>
 
@@ -95,7 +102,7 @@ export default function BoomLiftOnRentPage() {
                   <div className="relative h-64 w-full bg-slate-50 border-b border-slate-100">
                     <Image
                       src={model.images[0]}
-                      alt={`Straightline ${model.name} boom lift on rent in India`}
+                      alt={`${model.name} ${model.type === "telescopic" ? "telescopic" : "articulating"} boom lift, ${model.workingHeight} working height`}
                       fill
                       className="object-contain p-4"
                       sizes="(max-width: 768px) 100vw, 50vw"

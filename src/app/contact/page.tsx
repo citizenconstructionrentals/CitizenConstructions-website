@@ -65,7 +65,7 @@ export default function ContactPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Request your scissor lift rental quote or boom lift rental contact directly with Citizen Construction Rentals contact desk. Call our scissor lift on rent contact number or receive an instant rental quote on WhatsApp for immediate site delivery across India.
+            Request your scissor lift or boom lift rental quote directly from the Citizen Construction Rentals desk. Call our team or get an instant quote on WhatsApp for equipment delivery across India.
           </p>
         </div>
       </section>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   Direct Communications
                 </span>
                 <h2 className="font-heading font-bold text-2xl sm:text-3xl uppercase tracking-tight text-brand-ink">
-                  Scissor Lift Rental Quote &amp; Instant Communication
+                  Direct Rental Quotations &amp; Support
                 </h2>
                 <p className="text-xs sm:text-sm text-gray-600 mt-1">
                   Tap below to connect directly with our dispatch team.
@@ -93,7 +93,7 @@ export default function ContactPage() {
                 <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-brand-offwhite shrink-0">
                   <Image
                     src="/images/machines/scissor/straightline-cutout-hd.png"
-                    alt="Citizen Construction Rentals - Scissor lift rental quote assistance"
+                    alt="Straightline electric scissor lift fleet"
                     fill
                     sizes="64px"
                     className="object-contain p-1"

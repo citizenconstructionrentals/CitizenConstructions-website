@@ -17,19 +17,26 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Scissor Lift Rental Company in India | Citizen Construction Rentals",
+  title: "About Citizen Construction Rentals | Aerial Work Platforms Since 2000",
   description:
-    "Citizen Construction Rentals is a leading scissor lift rental company in India and aerial work platform rental company. Dedicated boom lift rental company since 2000 with pan India lift rental operations.",
+    "Citizen Construction Rentals provides aerial work platform rentals across India since 2000. Rent brand new Straightline lifts and trusted used JLG & Genie machines.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
-  keywords: [
-    "scissor lift rental company in India",
-    "aerial work platform rental company",
-    "boom lift rental company since 2000",
-    "Citizen Construction Rentals",
-    "pan India lift rental operations",
-  ],
+  openGraph: {
+    title: "About Citizen Construction Rentals | Aerial Work Platforms Since 2000",
+    description:
+      "Citizen Construction Rentals provides aerial work platform rentals across India since 2000. Rent brand new Straightline lifts and trusted used JLG & Genie machines.",
+    url: `${siteConfig.url}/about`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Citizen Construction Rentals | Aerial Work Platforms Since 2000",
+    description:
+      "Citizen Construction Rentals provides aerial work platform rentals across India since 2000. Rent brand new Straightline lifts and trusted used JLG & Genie machines.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function AboutPage() {
@@ -74,7 +81,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Citizen Construction Rentals is an experienced scissor lift rental company in India and aerial work platform rental company. Dedicated boom lift rental company since 2000 offering comprehensive pan India lift rental operations for industrial and infrastructure sites.
+            Citizen Construction Rentals provides aerial work platform rentals across India. Operating since 2000, we deliver brand new Straightline lifts and trusted used JLG and Genie equipment for industrial and infrastructure projects.
           </p>
         </div>
       </section>
@@ -166,7 +173,7 @@ export default function AboutPage() {
                     <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#EAEFF5]">
                       <Image
                         src={director.image}
-                        alt={`${director.name} - Director at Citizen Construction Rentals, scissor lift rental company in India`}
+                        alt={`${director.name}, Director at Citizen Construction Rentals`}
                         fill
                         sizes="(min-width: 1100px) 305px, (min-width: 768px) 305px, (min-width: 360px) 48vw, 100vw"
                         className="object-cover object-[50%_15%] transition-transform duration-500 ease-out group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"

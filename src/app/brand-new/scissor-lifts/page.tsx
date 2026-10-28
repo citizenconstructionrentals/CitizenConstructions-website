@@ -14,19 +14,26 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Brand New Scissor Lift on Rent | Straightline Electric Fleet India",
+  title: "Brand New Scissor Lifts on Rent | Straightline Fleet | Citizen Construction Rentals",
   description:
-    "Rent a brand new scissor lift on rent across India. Explore Straightline scissor lift rental options with CE certified scissor lift on rent assurance and electric scissor lift rental across 6m 8m 10m 12m 14m scissor lift on rent sizes.",
+    "Rent brand new CE-certified Straightline electric scissor lifts across India. 6 m to 14 m platform heights with working heights up to 15.7 m, delivered to your site.",
   alternates: {
     canonical: `${siteConfig.url}/brand-new/scissor-lifts`,
   },
-  keywords: [
-    "brand new scissor lift on rent",
-    "Straightline scissor lift rental",
-    "CE certified scissor lift on rent",
-    "electric scissor lift rental",
-    "6m 8m 10m 12m 14m scissor lift on rent",
-  ],
+  openGraph: {
+    title: "Brand New Scissor Lifts on Rent | Straightline Fleet | Citizen Construction Rentals",
+    description:
+      "Rent brand new CE-certified Straightline electric scissor lifts across India. 6 m to 14 m platform heights with working heights up to 15.7 m, delivered to your site.",
+    url: `${siteConfig.url}/brand-new/scissor-lifts`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brand New Scissor Lifts on Rent | Straightline Fleet | Citizen Construction Rentals",
+    description:
+      "Rent brand new CE-certified Straightline electric scissor lifts across India. 6 m to 14 m platform heights with working heights up to 15.7 m, delivered to your site.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function ScissorLiftsListingPage() {
@@ -83,7 +90,7 @@ export default function ScissorLiftsListingPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Citizen Construction Rentals offers brand new scissor lift on rent options with our complete Straightline scissor lift rental fleet. Benefit from CE certified scissor lift on rent safety standards and electric scissor lift rental choices across 6m 8m 10m 12m 14m scissor lift on rent capacity classes delivered directly to your job site anywhere in India.
+            Citizen Construction Rentals provides brand new CE-certified Straightline electric scissor lifts on rent across India. Choose from 6 m to 14 m platform heights with working heights up to 15.7 m, delivered ready for operation directly to your job site.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

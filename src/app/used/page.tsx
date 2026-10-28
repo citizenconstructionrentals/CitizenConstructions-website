@@ -17,19 +17,26 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "JLG and Genie Lift on Rent | Citizen Construction Rentals India",
+  title: "Used Fleet on Rent | JLG & Genie Lifts | Citizen Construction Rentals",
   description:
-    "Citizen Construction Rentals offers JLG and Genie lift on rent across India. Reliable used lift on rent options with JLG lift rental and Genie lift rental backed by trusted aerial platform hire dispatch.",
+    "Rent inspected used JLG and Genie scissor lifts and boom lifts across India from Citizen Construction Rentals. Cost-effective aerial work platforms.",
   alternates: {
     canonical: `${siteConfig.url}/used`,
   },
-  keywords: [
-    "JLG and Genie lift on rent",
-    "used lift on rent",
-    "JLG lift rental",
-    "Genie lift rental",
-    "trusted aerial platform hire",
-  ],
+  openGraph: {
+    title: "Used Fleet on Rent | JLG & Genie Lifts | Citizen Construction Rentals",
+    description:
+      "Rent inspected used JLG and Genie scissor lifts and boom lifts across India from Citizen Construction Rentals. Cost-effective aerial work platforms.",
+    url: `${siteConfig.url}/used`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Used Fleet on Rent | JLG & Genie Lifts | Citizen Construction Rentals",
+    description:
+      "Rent inspected used JLG and Genie scissor lifts and boom lifts across India from Citizen Construction Rentals. Cost-effective aerial work platforms.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function UsedLandingPage() {
@@ -75,7 +82,7 @@ export default function UsedLandingPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Citizen Construction Rentals offers dependable JLG and Genie lift on rent options across India. Choose our used lift on rent inventory with dedicated JLG lift rental and Genie lift rental choices for trusted aerial platform hire on every job site.
+            Citizen Construction Rentals offers inspected used JLG and Genie aerial lifts across India. Choose dependable scissor and boom lifts for cost-effective height access on your job site.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -95,10 +102,10 @@ export default function UsedLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-heading font-bold text-3xl sm:text-4xl uppercase tracking-tight text-brand-ink">
-              JLG and Genie Lift on Rent — Scissor &amp; Boom Series
+              Used Fleet — Scissor &amp; Boom Models
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-              Reliable slab scissor lifts for vertical elevation or articulating/telescopic boom lifts for up-and-over outreach on rent.
+              Reliable slab scissor lifts for vertical elevation or articulating and telescopic boom lifts for up-and-over outreach.
             </p>
           </div>
 
@@ -109,7 +116,7 @@ export default function UsedLandingPage() {
                 <div className="relative h-60 w-full mb-6 rounded-2xl overflow-hidden bg-brand-offwhite p-4">
                   <Image
                     src="/images/used/jlg-scissor-hd.png"
-                    alt="JLG and Genie lift on rent - Scissor Lift"
+                    alt="Used JLG electric scissor lift"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-contain group-hover:scale-105 transition-transform duration-300"
@@ -159,7 +166,7 @@ export default function UsedLandingPage() {
                 <div className="relative h-60 w-full mb-6 rounded-2xl overflow-hidden bg-brand-offwhite p-4">
                   <Image
                     src="/images/used/jlg-boom-hd.png"
-                    alt="JLG and Genie lift on rent - Boom Lift"
+                    alt="Used Genie articulating boom lift"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-contain group-hover:scale-105 transition-transform duration-300"

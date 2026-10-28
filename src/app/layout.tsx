@@ -47,27 +47,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
-  keywords: [
-    "scissor lift on rent",
-    "scissor lift on rent in India",
-    "boom lift on rent in India",
-    "scissor lift rental India",
-    "boom lift rental India",
-    "aerial work platform rental",
-    "man lift on rent",
-    "aerial lift on hire",
-    "Straightline scissor lift rental",
-    "Citizen Construction Rentals",
-  ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: siteConfig.url,
-    title: "Citizen Construction Rentals | Aerial Work Platforms on Rent Across India",
+    title: "Citizen Construction Rentals | Scissor & Boom Lifts on Rent in India",
     description:
-      "Rent brand new CE-certified Straightline scissor & boom lifts, and trusted used JLG & Genie machines. Delivered to your site across India since 2000.",
+      "Pan-India aerial work platform rentals operating since 2000. Rent brand new CE-certified Straightline scissor lifts & boom lifts, and trusted used JLG & Genie machines.",
     siteName: siteConfig.name,
     images: [
       {
@@ -80,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Citizen Construction Rentals | Scissor & Boom Lift Rental India",
+    title: "Citizen Construction Rentals | Scissor & Boom Lifts on Rent in India",
     description:
-      "Brand new CE-certified Straightline lifts and quality used JLG & Genie machines on rent across all of India since 2000.",
+      "Pan-India aerial work platform rentals operating since 2000. Rent brand new CE-certified Straightline scissor lifts & boom lifts, and trusted used JLG & Genie machines.",
     images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
   },
   icons: {

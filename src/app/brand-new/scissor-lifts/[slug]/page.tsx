@@ -41,23 +41,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const model = scissorLiftsData.find((m) => m.slug === slug);
   if (!model) return {};
 
-  const primaryKeyword = `${model.nominalHeight} scissor lift on rent`;
-  const mClean = model.nominalHeight.replace(" ", "");
-  const meterClean = model.nominalHeight.replace(" m", " meter");
+  const title = `${model.nominalHeight} Scissor Lift on Rent (${model.name}) | Citizen Construction Rentals`;
+  const description = `Rent a ${model.nominalHeight} electric scissor lift (${model.name}) from Citizen Construction Rentals. Working height ${model.workingHeight}, platform height ${model.platformHeight}, rated capacity ${model.safeWorkingLoad}. CE certified.`;
 
   return {
-    title: `${model.nominalHeight} Scissor Lift on Rent (${model.name}) | Citizen Construction Rentals`,
-    description: `Rent a ${primaryKeyword} with Straightline ${model.modelCode} on rent from Citizen Construction Rentals. Fast ${meterClean} scissor lift rental, ${mClean} scissor lift on hire, and electric scissor lift ${mClean} dispatch across India.`,
+    title,
+    description,
     alternates: {
       canonical: `${siteConfig.url}/brand-new/scissor-lifts/${model.slug}`,
     },
-    keywords: [
-      primaryKeyword,
-      `Straightline ${model.modelCode} on rent`,
-      `${meterClean} scissor lift rental`,
-      `${mClean} scissor lift on hire`,
-      `electric scissor lift ${mClean}`,
-    ],
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.url}/brand-new/scissor-lifts/${model.slug}`,
+      images: [{ url: `${siteConfig.url}${model.images[0]}` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${siteConfig.url}${model.images[0]}`],
+    },
   };
 }
 
@@ -127,7 +131,7 @@ export default async function ScissorModelPage({ params }: PageProps) {
                   {model.nominalHeight} Scissor Lift on Rent ({model.name})
                 </h1>
                 <p className="mt-2 text-sm text-gray-500 font-sans leading-relaxed">
-                  Looking for a {primaryKeyword}? Citizen Construction Rentals provides the Straightline {model.modelCode} on rent for high-reach projects across India. Benefit from verified {meterClean} scissor lift rental options, fast {mClean} scissor lift on hire mobilization, and zero-emission electric scissor lift {mClean} performance.
+                  Citizen Construction Rentals provides the Straightline {model.modelCode} electric scissor lift for indoor and outdoor access across India. Featuring an electric proportional drive, non-marking tyres, and CE-certified safety systems, delivered ready to operate at your site.
                 </p>
               </div>
 

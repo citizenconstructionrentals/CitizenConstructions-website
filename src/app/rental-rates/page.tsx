@@ -8,18 +8,25 @@ import { ArrowRight, Calculator, CheckCircle2, MessageCircle, Phone, ShieldCheck
 import { CtaBand } from "@/components/shared/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Scissor Lift Rental Rate & Boom Lift Rental Cost in India",
+  title: "Rental Rates & Charges | Citizen Construction Rentals",
   description:
-    "Transparent scissor lift rental rate guidance from Citizen Construction Rentals. Understand aerial work platform rental charges per day and per month across India.",
+    "Transparent rental pricing for scissor lifts and boom lifts across India. Learn how daily rates, monthly contracts, and mobilization freight are calculated.",
   alternates: {
     canonical: `${siteConfig.url}/rental-rates`,
   },
   openGraph: {
-    title: "Scissor Lift Rental Rate & Cost Guide | Citizen Construction Rentals",
+    title: "Rental Rates & Charges | Citizen Construction Rentals",
     description:
-      "Learn how aerial work platform rental charges are calculated. Get custom rates for daily and monthly lift hire across India.",
+      "Transparent rental pricing for scissor lifts and boom lifts across India. Learn how daily rates, monthly contracts, and mobilization freight are calculated.",
     url: `${siteConfig.url}/rental-rates`,
     images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rental Rates & Charges | Citizen Construction Rentals",
+    description:
+      "Transparent rental pricing for scissor lifts and boom lifts across India. Learn how daily rates, monthly contracts, and mobilization freight are calculated.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
   },
 };
 
@@ -43,7 +50,7 @@ export default function RentalRatesPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-3xl leading-relaxed font-sans">
-            Citizen Construction Rentals provides customized rates for aerial work platform hire across India. Learn how scissor lift rent per day, scissor lift rent per month, and boom lift rental cost are determined.
+            Citizen Construction Rentals provides customized rates for aerial work platform hire across India. Learn how daily rentals, monthly contracts, and equipment mobilization freight are determined.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4 pt-2">
@@ -71,13 +78,13 @@ export default function RentalRatesPage() {
                 Scissor Lift Rental Rate &amp; Cost Factor Calculations
               </h2>
               <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
-                When clients ask how much does it cost to rent a scissor lift or inquire about the boom lift rental cost, aerial work platform rental charges are structured based on technical job specifications rather than fixed one-size-fits-all figures. Citizen Construction Rentals ensures clear, itemized pricing for every project.
+                Aerial work platform rental charges are structured based on technical job specifications rather than fixed one-size-fits-all figures. Citizen Construction Rentals ensures clear, itemized pricing for every project.
               </p>
             </div>
             <div className="lg:col-span-4 relative h-48 sm:h-56 rounded-2xl overflow-hidden bg-brand-offwhite border border-slate-200 p-4 flex items-center justify-center">
               <Image
                 src="/images/machines/scissor/straightline-cutout-hd.png"
-                alt="Scissor lift rental rate and aerial work platform rental charges in India"
+                alt="Straightline electric scissor lift"
                 fill
                 className="object-contain p-4"
                 sizes="(max-width: 1024px) 100vw, 33vw"
@@ -118,7 +125,7 @@ export default function RentalRatesPage() {
                 Rental Duration
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We accommodate both short-term scissor lift rent per day for shutdowns as well as long-term scissor lift rent per month contracts with advantageous recurring rates.
+                We accommodate both short-term daily rentals for urgent shutdowns as well as extended monthly contracts with volume discounts.
               </p>
             </div>
 

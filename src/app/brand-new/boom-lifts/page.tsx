@@ -10,18 +10,26 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Brand New Boom Lift on Rent | Straightline Fleet Rental India",
+  title: "Brand New Boom Lifts on Rent | Straightline Fleet | Citizen Construction Rentals",
   description:
-    "Rent a brand new boom lift on rent across India. Explore Straightline boom lift rental options with CE certified boom lift on rent assurance and boom lift for high reach work on rent.",
+    "Rent brand new CE-certified Straightline telescopic and articulating boom lifts across India. High-reach access for construction, industrial plants, and facade work.",
   alternates: {
     canonical: `${siteConfig.url}/brand-new/boom-lifts`,
   },
-  keywords: [
-    "brand new boom lift on rent",
-    "Straightline boom lift rental",
-    "CE certified boom lift on rent",
-    "boom lift for high reach work on rent",
-  ],
+  openGraph: {
+    title: "Brand New Boom Lifts on Rent | Straightline Fleet | Citizen Construction Rentals",
+    description:
+      "Rent brand new CE-certified Straightline telescopic and articulating boom lifts across India. High-reach access for construction, industrial plants, and facade work.",
+    url: `${siteConfig.url}/brand-new/boom-lifts`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brand New Boom Lifts on Rent | Straightline Fleet | Citizen Construction Rentals",
+    description:
+      "Rent brand new CE-certified Straightline telescopic and articulating boom lifts across India. High-reach access for construction, industrial plants, and facade work.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function BoomLiftsListingPage() {
@@ -78,7 +86,7 @@ export default function BoomLiftsListingPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Citizen Construction Rentals offers brand new boom lift on rent solutions with our dedicated Straightline boom lift rental fleet. Benefit from CE certified boom lift on rent standards and heavy-duty boom lift for high reach work on rent delivered to your job site across India.
+            Citizen Construction Rentals provides brand new CE-certified Straightline boom lifts on rent across India. Choose from high-reach telescopic and versatile articulating models delivered directly to your job site.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

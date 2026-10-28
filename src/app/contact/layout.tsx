@@ -4,17 +4,24 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Scissor Lift Rental Quote | Contact Citizen Construction Rentals",
   description:
-    "Request a scissor lift rental quote or boom lift rental contact. Call our scissor lift on rent contact number or connect with Citizen Construction Rentals contact for an instant rental quote on WhatsApp.",
+    "Contact Citizen Construction Rentals for instant scissor lift and boom lift rental quotes across India. Connect via WhatsApp or call our rental desk directly.",
   alternates: {
     canonical: `${siteConfig.url}/contact`,
   },
-  keywords: [
-    "scissor lift rental quote",
-    "boom lift rental contact",
-    "scissor lift on rent contact number",
-    "Citizen Construction Rentals contact",
-    "instant rental quote on WhatsApp",
-  ],
+  openGraph: {
+    title: "Scissor Lift Rental Quote | Contact Citizen Construction Rentals",
+    description:
+      "Contact Citizen Construction Rentals for instant scissor lift and boom lift rental quotes across India. Connect via WhatsApp or call our rental desk directly.",
+    url: `${siteConfig.url}/contact`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scissor Lift Rental Quote | Contact Citizen Construction Rentals",
+    description:
+      "Contact Citizen Construction Rentals for instant scissor lift and boom lift rental quotes across India. Connect via WhatsApp or call our rental desk directly.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function ContactLayout({

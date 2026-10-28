@@ -15,19 +15,26 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Brand New Lift on Rent | Straightline Fleet Rental India",
+  title: "Brand New Fleet on Rent | Citizen Construction Rentals",
   description:
-    "Rent a brand new lift on rent from Citizen Construction Rentals. Choose a new scissor lift on rent or new boom lift on rent with CE certified lift on rent assurance and reliable Straightline lift rental dispatch.",
+    "Rent brand new CE-certified Straightline electric scissor lifts and boom lifts from Citizen Construction Rentals. Delivered to your site across India.",
   alternates: {
     canonical: `${siteConfig.url}/brand-new`,
   },
-  keywords: [
-    "brand new lift on rent",
-    "new scissor lift on rent",
-    "new boom lift on rent",
-    "CE certified lift on rent",
-    "Straightline lift rental",
-  ],
+  openGraph: {
+    title: "Brand New Fleet on Rent | Citizen Construction Rentals",
+    description:
+      "Rent brand new CE-certified Straightline electric scissor lifts and boom lifts from Citizen Construction Rentals. Delivered to your site across India.",
+    url: `${siteConfig.url}/brand-new`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brand New Fleet on Rent | Citizen Construction Rentals",
+    description:
+      "Rent brand new CE-certified Straightline electric scissor lifts and boom lifts from Citizen Construction Rentals. Delivered to your site across India.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function BrandNewPage() {
@@ -84,7 +91,7 @@ export default function BrandNewPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Citizen Construction Rentals provides brand new lift on rent options across India. Mobilize a new scissor lift on rent or new boom lift on rent backed by CE certified lift on rent safety standards and full Straightline lift rental technical support directly delivered to your project site.
+            Citizen Construction Rentals provides brand new CE-certified Straightline electric scissor lifts and boom lifts on rent across India. Each machine is delivered directly to your project site ready for immediate operation.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -104,10 +111,10 @@ export default function BrandNewPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-heading font-bold text-3xl sm:text-4xl uppercase tracking-tight text-brand-ink">
-              Brand New Lift on Rent — Scissor &amp; Boom Series
+              Brand New Fleet — Scissor &amp; Boom Series
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-              Select a new scissor lift on rent or new boom lift on rent backed by full Straightline lift rental technical support across India.
+              Select a brand new scissor lift or boom lift backed by full technical support and maintenance assistance across India.
             </p>
           </div>
 
@@ -118,7 +125,7 @@ export default function BrandNewPage() {
                 <div className="relative h-60 w-full mb-6 rounded-2xl overflow-hidden bg-brand-offwhite p-4">
                   <Image
                     src="/images/machines/scissor/straightline-gtjz12-hd.png"
-                    alt="Straightline brand new lift on rent - scissor model"
+                    alt="Straightline GTJZ12 electric scissor lift, 12 m platform height"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-contain group-hover:scale-105 transition-transform duration-300"
@@ -168,7 +175,7 @@ export default function BrandNewPage() {
                 <div className="relative h-60 w-full mb-6 rounded-2xl overflow-hidden bg-brand-offwhite p-4">
                   <Image
                     src="/images/machines/boom/sl28t.png"
-                    alt="Brand New Straightline Boom Lift on rent"
+                    alt="Straightline SL28T telescopic boom lift, 28 m working height"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-contain group-hover:scale-105 transition-transform duration-300"

@@ -13,19 +13,26 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "JLG Boom Lift on Rent & Genie Fleet | Citizen Construction Rentals",
+  title: "JLG & Genie Boom Lifts on Rent | Citizen Construction Rentals",
   description:
-    "Get JLG boom lift on rent and Genie boom lift on rent from Citizen Construction Rentals. Tested used boom lift on rent, Genie boom lift rental India, and JLG rough terrain boom rental delivered across India.",
+    "Rent inspected used JLG and Genie boom lifts across India from Citizen Construction Rentals. Telescopic and articulating models delivered to your site.",
   alternates: {
     canonical: `${siteConfig.url}/used/boom-lifts`,
   },
-  keywords: [
-    "JLG boom lift on rent",
-    "Genie boom lift on rent",
-    "used boom lift on rent",
-    "Genie boom lift rental India",
-    "JLG rough terrain boom rental",
-  ],
+  openGraph: {
+    title: "JLG & Genie Boom Lifts on Rent | Citizen Construction Rentals",
+    description:
+      "Rent inspected used JLG and Genie boom lifts across India from Citizen Construction Rentals. Telescopic and articulating models delivered to your site.",
+    url: `${siteConfig.url}/used/boom-lifts`,
+    images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JLG & Genie Boom Lifts on Rent | Citizen Construction Rentals",
+    description:
+      "Rent inspected used JLG and Genie boom lifts across India from Citizen Construction Rentals. Telescopic and articulating models delivered to your site.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
+  },
 };
 
 export default function UsedBoomLiftsPage() {
@@ -78,7 +85,7 @@ export default function UsedBoomLiftsPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed font-sans">
-            Citizen Construction Rentals provides dependable JLG boom lift on rent and Genie boom lift on rent solutions. Select from our high-reach used boom lift on rent options with Genie boom lift rental India and JLG rough terrain boom rental equipment delivered to your site.
+            Citizen Construction Rentals provides dependable JLG and Genie boom lifts on rent across India. High-reach telescopic and articulating machines delivered directly from our Delhi base to your site.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -106,7 +113,7 @@ export default function UsedBoomLiftsPage() {
                   <div className="relative h-64 w-full mb-6 rounded-2xl overflow-hidden bg-brand-offwhite p-4">
                     <Image
                       src={item.image}
-                      alt={item.brand === "JLG" ? "JLG boom lift on rent - high reach access" : "Genie boom lift on rent - articulating reach"}
+                      alt={item.brand === "JLG" ? "Used JLG telescopic boom lift" : "Used Genie articulating boom lift"}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain group-hover:scale-105 transition-transform duration-300"

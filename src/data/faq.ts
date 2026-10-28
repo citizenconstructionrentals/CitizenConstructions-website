@@ -13,7 +13,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Which scissor lift height do I need?",
     answer:
-      "Working height is approximately 2 m (2 meter / 2 metre) more than the platform height, accounting for the standing operator's reach. For instance, an 8 m working height requires a 6 m platform lift, while reaching 13.7 m requires a 12 m platform lift. We rent Straightline models across 6m, 8m, 10m, 12m, and 14m nominal heights.",
+      "Working height is approximately 2 m more than the platform height, accounting for the standing operator's reach. For instance, an 8 m working height requires a 6 m platform lift, while reaching 13.8 m requires a 12 m platform lift. We rent Straightline models across 6 m, 8 m, 10 m, 12 m, and 14 m nominal heights.",
   },
   {
     question: "What is the difference between a scissor lift and a boom lift?",

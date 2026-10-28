@@ -9,18 +9,25 @@ import { Check, ArrowRight, ShieldCheck, Zap, Building2, HelpCircle } from "luci
 import { CtaBand } from "@/components/shared/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Scissor Lift on Rent in India | Electric Self-Propelled Rental Fleet",
+  title: "Scissor Lift on Rent in India | Citizen Construction Rentals",
   description:
-    "Scissor lift on rent in India from Citizen Construction Rentals. Rent brand new CE-certified Straightline electric scissor lifts & used JLG & Genie man lifts on hire.",
+    "Rent brand new CE-certified Straightline electric scissor lifts and trusted used JLG & Genie machines with fast delivery to your site across India.",
   alternates: {
     canonical: `${siteConfig.url}/scissor-lift-on-rent`,
   },
   openGraph: {
     title: "Scissor Lift on Rent in India | Citizen Construction Rentals",
     description:
-      "Electric self-propelled scissor lift rental across India. 6m to 14m platform heights available on rent per day and rent per month.",
+      "Rent brand new CE-certified Straightline electric scissor lifts and trusted used JLG & Genie machines with fast delivery to your site across India.",
     url: `${siteConfig.url}/scissor-lift-on-rent`,
     images: [{ url: `${siteConfig.url}/images/hero/hero-boom-lot.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scissor Lift on Rent in India | Citizen Construction Rentals",
+    description:
+      "Rent brand new CE-certified Straightline electric scissor lifts and trusted used JLG & Genie machines with fast delivery to your site across India.",
+    images: [`${siteConfig.url}/images/hero/hero-boom-lot.jpg`],
   },
 };
 
@@ -74,13 +81,13 @@ export default function ScissorLiftOnRentPage() {
               <span>Reliable Access Equipment</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 uppercase">
-              Scissor Lift on Rent in India — Electric Self-Propelled Fleet
+              Electric Self-Propelled Scissor Lifts
             </h2>
             <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
-              Scissor lifts (also called man lifts or aerial work platforms) provide safe, vertical elevation for warehouse high-bay installation, facility maintenance, HVAC ducting, and construction fit-outs. Whether you require a reliable man lift on rent or a self-propelled scissor lift rental, our modern inventory features quiet electric scissor lift on rent drives, zero exhaust emissions, and durable non-marking tyres that safeguard sensitive industrial flooring.
+              Scissor lifts provide safe vertical elevation for warehouse high-bay installation, facility maintenance, HVAC ducting, and construction fit-outs. Our modern fleet features quiet electric drives, zero exhaust emissions, and durable non-marking tyres that protect sensitive industrial flooring.
             </p>
             <p className="mt-3 text-base text-slate-600 leading-relaxed">
-              Whether your project demands scissor lift on hire units for a quick shutdown or extended monthly hire, Citizen Construction Rentals structures flexible terms for scissor lift rent per day and scissor lift rent per month with our comprehensive scissor lift rental service.
+              Whether your project requires equipment for a short shutdown or an extended monthly contract, Citizen Construction Rentals provides flexible rental terms with rapid delivery directly to your job site across India.
             </p>
           </div>
 
@@ -95,7 +102,7 @@ export default function ScissorLiftOnRentPage() {
                   <div className="relative h-56 w-full bg-slate-50 border-b border-slate-100">
                     <Image
                       src={model.images[0]}
-                      alt={`Straightline ${model.name} ${model.nominalHeight} scissor lift on rent in India`}
+                      alt={`${model.name} electric scissor lift, ${model.platformHeight} platform height`}
                       fill
                       className="object-contain p-4"
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -157,7 +164,7 @@ export default function ScissorLiftOnRentPage() {
               Which Scissor Lift Height Do I Need?
             </h2>
             <p className="mt-3 text-base sm:text-lg text-slate-600">
-              Working height is always calculated as platform height plus approximately 2 m (around 2 meter / 2 metre reach).
+              Working height is calculated as platform height plus approximately 2 m operator reach.
             </p>
           </div>
 
@@ -176,40 +183,40 @@ export default function ScissorLiftOnRentPage() {
               <tbody className="divide-y divide-slate-100 text-slate-700">
                 <tr>
                   <td className="py-3.5 px-6 font-bold text-brand-navy">GTJZ06</td>
-                  <td className="py-3.5 px-6">6 m (6m)</td>
-                  <td className="py-3.5 px-6">6 m (6 meter)</td>
-                  <td className="py-3.5 px-6 font-semibold">8 m (8 metre)</td>
+                  <td className="py-3.5 px-6">6 m</td>
+                  <td className="py-3.5 px-6">6 m</td>
+                  <td className="py-3.5 px-6 font-semibold">8 m</td>
                   <td className="py-3.5 px-6">500 kg</td>
                   <td className="py-3.5 px-6">Low-bay lighting &amp; retail fit-outs</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-6 font-bold text-brand-navy">GTJZ08</td>
-                  <td className="py-3.5 px-6">8 m (8m)</td>
-                  <td className="py-3.5 px-6">8 m (8 meter)</td>
-                  <td className="py-3.5 px-6 font-semibold">10 m (10 metre)</td>
+                  <td className="py-3.5 px-6">8 m</td>
+                  <td className="py-3.5 px-6">8 m</td>
+                  <td className="py-3.5 px-6 font-semibold">10 m</td>
                   <td className="py-3.5 px-6">450 kg</td>
                   <td className="py-3.5 px-6">Standard logistics &amp; warehouse racking</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-6 font-bold text-brand-navy">GTJZ10</td>
-                  <td className="py-3.5 px-6">10 m (10m)</td>
-                  <td className="py-3.5 px-6">10 m (10 meter)</td>
-                  <td className="py-3.5 px-6 font-semibold">12 m (12 metre)</td>
+                  <td className="py-3.5 px-6">10 m</td>
+                  <td className="py-3.5 px-6">10 m</td>
+                  <td className="py-3.5 px-6 font-semibold">12 m</td>
                   <td className="py-3.5 px-6">320 kg</td>
                   <td className="py-3.5 px-6">High-bay electrical cabling &amp; ductwork</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-6 font-bold text-brand-navy">GTJZ12</td>
-                  <td className="py-3.5 px-6">12 m (12m)</td>
-                  <td className="py-3.5 px-6">11.8 m (12 meter class)</td>
+                  <td className="py-3.5 px-6">12 m</td>
+                  <td className="py-3.5 px-6">11.8 m</td>
                   <td className="py-3.5 px-6 font-semibold">13.8 m</td>
                   <td className="py-3.5 px-6">320 kg</td>
                   <td className="py-3.5 px-6">Industrial plant retrofitting &amp; sprinklers</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-6 font-bold text-brand-navy">GTJZ14</td>
-                  <td className="py-3.5 px-6">14 m (14m)</td>
-                  <td className="py-3.5 px-6">13.7 m (14 meter class)</td>
+                  <td className="py-3.5 px-6">14 m</td>
+                  <td className="py-3.5 px-6">13.7 m</td>
                   <td className="py-3.5 px-6 font-semibold">15.7 m</td>
                   <td className="py-3.5 px-6">227 kg</td>
                   <td className="py-3.5 px-6">Tall warehouse maintenance &amp; heavy facilities</td>

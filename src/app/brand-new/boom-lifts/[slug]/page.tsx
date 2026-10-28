@@ -34,36 +34,32 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const model = boomLiftsData.find((m) => m.slug === slug);
   if (!model) return {};
 
-  const isSl28t = slug === "sl28t";
-  const primaryKeyword = isSl28t
-    ? "Straightline SL28T boom lift on rent"
-    : "Straightline articulating boom lift on rent";
+  const title = isSl28t
+    ? "Straightline SL28T Telescopic Boom Lift on Rent | Citizen Construction Rentals"
+    : "Straightline Articulating Boom Lift on Rent | Citizen Construction Rentals";
 
   const description = isSl28t
-    ? "Get Straightline SL28T boom lift on rent across India. SL28T boom lift rental with 28m working height boom lift hire and high reach boom lift rental India for demanding boom lift on rent sites."
-    : "Get Straightline articulating boom lift on rent across India. Articulating boom lift rental with up and over boom lift hire and 16m working height boom lift rental for versatile boom lift on rent sites.";
+    ? "Rent the Straightline SL28T telescopic boom lift across India from Citizen Construction Rentals. 28 m working height and heavy outreach for industrial and infrastructure sites."
+    : "Rent the Straightline articulating boom lift across India from Citizen Construction Rentals. 16 m working height with up-and-over reach for structural maintenance and facility fit-outs.";
 
   return {
-    title: `${primaryKeyword} | Citizen Construction Rentals`,
+    title,
     description,
     alternates: {
       canonical: `${siteConfig.url}/brand-new/boom-lifts/${slug}`,
     },
-    keywords: isSl28t
-      ? [
-          "Straightline SL28T boom lift on rent",
-          "SL28T boom lift rental",
-          "boom lift on rent",
-          "28m working height boom lift hire",
-          "high reach boom lift rental India",
-        ]
-      : [
-          "Straightline articulating boom lift on rent",
-          "articulating boom lift rental",
-          "boom lift on rent",
-          "up and over boom lift hire",
-          "16m working height boom lift rental",
-        ],
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.url}/brand-new/boom-lifts/${slug}`,
+      images: [{ url: `${siteConfig.url}${model.images[0]}` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${siteConfig.url}${model.images[0]}`],
+    },
   };
 }
 
@@ -143,12 +139,12 @@ export default async function BoomModelPage({ params }: PageProps) {
                   {model.type}
                 </span>
                 <h1 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-brand-ink leading-tight">
-                  {primaryKeyword}
+                  {model.name} Boom Lift on Rent
                 </h1>
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed font-sans">
                   {isSl28t
-                    ? "Looking for a Straightline SL28T boom lift on rent? Citizen Construction Rentals provides professional SL28T boom lift rental and 28m working height boom lift hire across India. Our high reach boom lift rental India fleet ensures reliable performance for any boom lift on rent deployment."
-                    : "Looking for a Straightline articulating boom lift on rent? Citizen Construction Rentals offers articulating boom lift rental with up and over boom lift hire and 16m working height boom lift rental. Perfect for clearing structural obstacles on your boom lift on rent projects."}
+                    ? "Citizen Construction Rentals provides the Straightline SL28T telescopic boom lift on rent for demanding high-reach operations across India. With a 28 m working height and robust rough-terrain capability, it delivers reliable performance on industrial and infrastructure sites."
+                    : "Citizen Construction Rentals provides the Straightline articulating boom lift on rent for versatile aerial access across India. Featuring up-and-over reach with a 16 m working height, it easily navigates around structural obstacles in industrial plants and facilities."}
                 </p>
               </div>
 
