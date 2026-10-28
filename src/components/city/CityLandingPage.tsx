@@ -121,18 +121,7 @@ export function CityLandingPage({ citySlug, liftType }: CityLandingPageProps) {
       ? `Brand new CE-certified Straightline electric scissor lift and inspected used JLG/Genie rental services for construction, warehousing, and industrial projects in ${city.name}, India.`
       : `High-reach Straightline telescopic and articulating boom lift rental services for structural installation, facade maintenance, and industrial construction in ${city.name}, India.`,
     provider: {
-      "@type": "LocalBusiness",
       "@id": "https://citizenconstructions.com/#localbusiness",
-      name: siteConfig.name,
-      telephone: siteConfig.phones.primary.display,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: siteConfig.postalAddress.streetAddress,
-        addressLocality: siteConfig.postalAddress.addressLocality,
-        addressRegion: siteConfig.postalAddress.addressRegion,
-        postalCode: siteConfig.postalAddress.postalCode,
-        addressCountry: siteConfig.postalAddress.addressCountry,
-      },
     },
     areaServed: {
       "@type": "City",
