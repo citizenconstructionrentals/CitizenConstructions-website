@@ -250,31 +250,53 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Physical Address & Map */}
-              {siteConfig.address && (
-                <div className="p-6 rounded-2xl bg-white border border-gray-200 shadow-soft space-y-3">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-brand-amber shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-heading font-bold uppercase text-brand-ink">
-                        Office &amp; Yard Location
-                      </h4>
-                      <p className="text-xs text-gray-600 mt-1">{siteConfig.address}</p>
-                    </div>
+              {/* Our Address */}
+              <div className="p-6 rounded-2xl bg-white border border-gray-200 shadow-soft space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-brand-navy/10 text-brand-navy flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5" />
                   </div>
-                  {siteConfig.mapEmbedUrl && (
-                    <div className="w-full h-48 rounded-xl overflow-hidden mt-3 border">
-                      <iframe
-                        src={siteConfig.mapEmbedUrl}
-                        width="100%"
-                        height="100%"
-                        loading="lazy"
-                        title="Citizen Construction Rentals Office Location"
-                      />
-                    </div>
-                  )}
+                  <div>
+                    <span className="text-xs text-gray-500 block uppercase font-bold tracking-wider">Our Address</span>
+                    <h3 className="font-heading font-bold uppercase text-brand-ink text-lg mt-0.5">
+                      New Delhi Operational Base
+                    </h3>
+                  </div>
                 </div>
-              )}
+
+                <address className="not-italic text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                  <p className="font-semibold text-brand-ink">{siteConfig.name}</p>
+                  <p>{siteConfig.address}</p>
+                  <p>
+                    Phone:{" "}
+                    <a href={`tel:+${siteConfig.phones.primary.raw}`} className="text-brand-navy font-semibold hover:underline">
+                      {siteConfig.phones.primary.display}
+                    </a>
+                    {" / "}
+                    <a href={`tel:+${siteConfig.phones.secondary.raw}`} className="text-brand-navy font-semibold hover:underline">
+                      {siteConfig.phones.secondary.display}
+                    </a>
+                  </p>
+                  <p>
+                    Email:{" "}
+                    <a href={`mailto:${siteConfig.email}`} className="text-brand-navy font-semibold hover:underline">
+                      {siteConfig.email}
+                    </a>
+                  </p>
+                </address>
+
+                <div className="pt-2">
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-colors"
+                  >
+                    <MapPin className="w-4 h-4 text-brand-amber" />
+                    <span>Get Directions</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Right: Quick Quotation Form (Builds WhatsApp Message directly) */}

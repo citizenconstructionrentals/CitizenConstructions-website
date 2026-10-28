@@ -95,7 +95,7 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-sm sm:text-base text-gray-600 leading-relaxed font-sans">
                 <p>
-                  Established in 2000, <strong>Citizen Construction Rentals</strong> has grown to provide comprehensive aerial work platform solutions across India. We specialize in renting both <strong>Scissor Lifts</strong> and <strong>Boom Lifts</strong> to meet the distinct challenges of construction sites, warehouse logistics, industrial facilities, signage installation, and exterior facade work.
+                  Established in 2000, <strong>Citizen Construction Rentals</strong> has grown to provide comprehensive aerial work platform solutions across India. Based in Moti Nagar, New Delhi, and delivering lifts to sites across India. We specialize in renting both <strong>Scissor Lifts</strong> and <strong>Boom Lifts</strong> to meet the distinct challenges of construction sites, warehouse logistics, industrial facilities, signage installation, and exterior facade work.
                 </p>
                 <p>
                   Our rental lineup features <strong>Brand New CE-certified Straightline lifts</strong>, engineered with modern electric proportional drives, advanced tilt and pothole protection, delivered to your site ready for work.

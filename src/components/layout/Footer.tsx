@@ -177,7 +177,7 @@ export function Footer() {
             <p className="font-bold text-white text-[16px] tracking-tight mb-4">
               Rental Desk
             </p>
-            <div className="space-y-3 text-[14px]">
+            <address className="not-italic space-y-3 text-[14px]">
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-brand-amber shrink-0 mt-1" />
                 <div className="space-y-1">
@@ -219,10 +219,10 @@ export function Footer() {
               <div className="flex items-start gap-3 pt-1">
                 <MapPin className="w-4 h-4 text-brand-amber shrink-0 mt-1" />
                 <span className="text-white/75 leading-snug">
-                  Pan-India equipment rental dispatch to all states and industrial corridors.
+                  {siteConfig.address}
                 </span>
               </div>
-            </div>
+            </address>
           </div>
         </div>
 

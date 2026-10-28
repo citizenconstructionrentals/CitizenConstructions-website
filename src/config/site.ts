@@ -31,8 +31,14 @@ export interface SiteConfig {
     instagram: string;
   };
 
-  // Physical address - empty by default, UI hides address/map until filled
   address: string;
+  postalAddress: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
   mapEmbedUrl?: string;
 
   // Category status flags ("live" | "coming-soon")
@@ -84,8 +90,14 @@ export const siteConfig: SiteConfig = {
     instagram: "https://www.instagram.com/citizenconstructionrentals/",
   },
 
-  // Leave empty as required by spec; Address & map UI remain hidden until filled
-  address: "",
+  address: "#13, Ground Floor, Block 20, Moti Nagar, New Delhi - 110015, India",
+  postalAddress: {
+    streetAddress: "#13, Ground Floor, Block 20, Moti Nagar",
+    addressLocality: "New Delhi",
+    addressRegion: "Delhi",
+    postalCode: "110015",
+    addressCountry: "IN",
+  },
   mapEmbedUrl: "",
 
   categoryStatus: {

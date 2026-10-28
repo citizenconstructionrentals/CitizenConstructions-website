@@ -6,58 +6,29 @@ import { ScissorLiftModel } from "@/data/scissor-lifts";
 export function OrganizationJsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${siteConfig.url}/#organization`,
-        name: siteConfig.name,
-        legalName: siteConfig.legalName,
-        alternateName: siteConfig.alternateName,
-        url: siteConfig.url,
-        logo: `${siteConfig.url}/brand/logo.png`,
-        image: `${siteConfig.url}/images/hero/hero-boom-lot.jpg`,
-        email: siteConfig.email,
-        telephone: [siteConfig.phones.primary.display, siteConfig.phones.secondary.display],
-        foundingDate: siteConfig.foundingYear.toString(),
-        areaServed: {
-          "@type": "Country",
-          name: "India",
-        },
-        sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": `${siteConfig.url}/#localbusiness`,
-        name: siteConfig.name,
-        legalName: siteConfig.legalName,
-        alternateName: siteConfig.alternateName,
-        url: siteConfig.url,
-        logo: `${siteConfig.url}/brand/logo.png`,
-        image: `${siteConfig.url}/images/hero/hero-boom-lot.jpg`,
-        email: siteConfig.email,
-        telephone: [siteConfig.phones.primary.display, siteConfig.phones.secondary.display],
-        priceRange: "₹₹₹",
-        currenciesAccepted: "INR",
-        paymentAccepted: "Cash, Credit Card, Bank Transfer",
-        areaServed: {
-          "@type": "Country",
-          name: "India",
-        },
-        parentOrganization: {
-          "@id": `${siteConfig.url}/#organization`,
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${siteConfig.url}/#website`,
-        url: siteConfig.url,
-        name: siteConfig.name,
-        alternateName: siteConfig.alternateName,
-        publisher: {
-          "@id": `${siteConfig.url}/#organization`,
-        },
-      },
-    ],
+    "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#localbusiness`,
+    name: siteConfig.name,
+    alternateName: siteConfig.alternateName,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/brand/logo.png`,
+    image: `${siteConfig.url}/images/hero/hero-boom-lot.jpg`,
+    telephone: [siteConfig.phones.primary.display, siteConfig.phones.secondary.display],
+    email: siteConfig.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.postalAddress.streetAddress,
+      addressLocality: siteConfig.postalAddress.addressLocality,
+      addressRegion: siteConfig.postalAddress.addressRegion,
+      postalCode: siteConfig.postalAddress.postalCode,
+      addressCountry: siteConfig.postalAddress.addressCountry,
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "India",
+    },
+    foundingDate: siteConfig.foundingYear.toString(),
+    sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
   };
 
   return (
